@@ -1,4 +1,4 @@
-Pane
-Pasta
-Biscotti
-Salame
+Pane;3.50;20
+Pasta;1.60;45
+Biscotti;4.70;80
+Salame;35;37
