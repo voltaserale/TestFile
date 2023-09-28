@@ -11,19 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		//*****  SCRITTURA SU UN FILE *****
-		try {
-			FileWriter fw=new FileWriter("prodotti.csv");	//crea un file di nome prodotti.txt
-			fw.write("Pane;3.50;20\n");			//scrive una riga nel file
-			fw.write("Pasta;1.60;45\n");
-			fw.write("Biscotti;4.70;80\n");
-			fw.write("Salame;35;37\n");
-			fw.close();					//chiude il file	
-			System.out.println("File correttamente creato");
-		} catch (IOException e) {
-			System.out.println("Si è verificato un errore in fase di creazione file!");
-			e.printStackTrace();
-		}
+		
 		
 		//*****  LETTURA DA UN FILE *****
 		File f=new File("prodotti.csv");
