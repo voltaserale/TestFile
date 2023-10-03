@@ -56,7 +56,7 @@ public class Main {
 			System.out.println("Premi Enter per continuare...");
 			sc.nextLine();
 		} while (!risp.equals("9"));
-			
+		sc.close();
 	}
 
 }
