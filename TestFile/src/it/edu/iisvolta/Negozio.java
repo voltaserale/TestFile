@@ -8,10 +8,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Negozio {
-	ArrayList<Prodotto> elencoProdotti=new ArrayList<Prodotto>();
+	private ArrayList<Prodotto> elencoProdotti=new ArrayList<Prodotto>();
 	
 	public void aggiungiProdotto(Prodotto p) {
-		elencoProdotti.add(p);
+		if (p.getPrezzo()>0 && 
+				p.getQuantità()>0 &&
+				p.getDescrizione().length()>0)
+			elencoProdotti.add(p);
 	}
 	
 	public void salva(String nomeFile) {
@@ -54,5 +57,9 @@ public class Negozio {
 			System.out.println("Si è verificato un errore in fase di lettura!"); 
 			e.printStackTrace();
 		}
+	}
+	
+	public Iterable<Prodotto> elencoProdotti() {		//restituisce una versione in sola lettura (Iterable) della lista dei prodotti
+		return this.elencoProdotti;
 	}
  }
